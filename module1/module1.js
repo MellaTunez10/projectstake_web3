@@ -36,3 +36,51 @@ for (i = 0; i < 8; i++){
   }
   console.log(r);
 }
+
+//MINIMUM
+
+function min(x, y) {
+  if (x < y) {
+    return x;
+  } else if (x > y) {
+    return y;
+  }
+}
+
+//RECURSION
+
+function isEven(n) {
+  
+  n = Math.abs(n)
+  if (n === 0) return true;
+  if (n === 1) return false; 
+  else return isEven(n - 2)
+}
+
+
+//countBs
+function CountBs(string) {
+  let count = 0;
+  for (i = 0; i < string.length; i++){
+    if (string[i] === "B") {
+      count++
+    }
+  }
+  return count;
+}
+
+// Modified Function to count uppercase B characters in a string using countChar
+function countBs(string) {
+    return countChar(string, 'B');
+}
+
+// Generalized function to count any character in a string
+function countChar(string, char) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === char) {
+            count++;
+        }
+    }
+    return count;
+}
